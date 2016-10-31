@@ -1,0 +1,21 @@
+
+{{#each model.artists as |artist|}}
+
+<h1> {{artist.name}} </h1>
+<h5> {{artist.name}} has {{model.songs.length}} songs </h5>
+{{/each }}
+<br>
+
+
+{{#each model.songs as |song|}}
+  {{#song-item song=song}}{{/song-item}}
+  
+  <br>
+  <!-- <div class ="song">
+    Song: {{song.title}} <br>
+    Price: {{song.price}} <br>
+    Play Count: {{song.playCount}} <br> <br>
+  </div> -->
+{{else}}
+  <p> No Songs For This Artist </p>
+{{/each}}
